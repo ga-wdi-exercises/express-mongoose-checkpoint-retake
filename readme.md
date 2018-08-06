@@ -44,10 +44,10 @@ For this checkpoint, you need to build a simple application for tracking Quests.
 5. Your application should have the following views...
 
   - A handlebars layout file named `views/layout.hbs`.
-  - A `views/index.hbs` lists the all the Quests, 
+  - A `views/index.hbs` lists all the Quests, 
   **showing the: `title` `quest_giver` of each `Quest`**.
   - A show view (`views/show.hbs`) for a `Quest` that, 
-  **displays the `Quests`'s `title`, `quest_giver`,  `rewards` and `locations` **.
+  **displays the `Quests`'s `title`, `quest_giver`,  `rewards` and `locations`**.
 
 **NOTES:**
 
