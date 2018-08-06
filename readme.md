@@ -31,10 +31,10 @@ For this checkpoint, you need to build a simple application for tracking Quests.
 
 3. There will be a single model, `Quest`, with 4 fields and they are expected to be a specific data type: 
 
-  title: String
-  quest_giver: String
-  rewards: Array
-  locations: Array
+  - title: String
+  - quest_giver: String
+  - rewards: Array
+  - locations: Array
 
 4. You should have 3 routes...
   - `GET '/'` which should redirect to `/quests'
