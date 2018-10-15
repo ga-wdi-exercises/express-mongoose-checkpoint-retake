@@ -80,7 +80,7 @@ describe("Model -", () => {
 
   before(done => {
     Quest = require("../models/Quest")
-    app = require("../index.js")
+    app = require("../index")
     done()
   })
 
