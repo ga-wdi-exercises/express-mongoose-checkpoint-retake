@@ -3,10 +3,17 @@
 // setting a partial directory was covered in a previous exercise
 // partials have been provided in views/partials/
 
+const express = require('express')
+const bodyParser = require('body-parser')
+const hbs = require("hbs")
+const app = express()
+
+app.set("view engine", "hbs")
 
 //the below routes can be used or changed as you see fit
 app.get("/", (req, res) => {
- res.send('this should redirect to the /quests route')
+//  res.send('this should redirect to the /quests route')
+ res.redirect('/quests')
 })
 
 app.get("/quests", (req, res) => {
