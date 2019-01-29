@@ -3,18 +3,33 @@
 // setting a partial directory was covered in a previous exercise
 // partials have been provided in views/partials/
 
+const express = require('express')
+const app = express()
+const hbs = require('hbs')
+// const router = express.Router()
+// const questsController = require('../controllers/quests')
+const Quest = require('../express-mongoose-checkpoint-retake/models/Quest')
+
+app.set("view engine", "hbs")
 
 //the below routes can be used or changed as you see fit
 app.get("/", (req, res) => {
- res.send('this should redirect to the /quests route')
+  res.redirect('/quests')
 })
 
 app.get("/quests", (req, res) => {
-  res.send('this should show all the quests')
+  Quest.find({})
+        .sort({ createdAt: -1 })
+        .then(quests => {
+            res.render('index', { quests })
+        })
 })
 
 app.get("/quest/:id", (req, res) => {
-  res.send('this should show a single quest')
+  Quest.findOne({ _id: req.params.id })
+        .then(quests => {
+            res.render('show', { quests })
+        })
 })
 
 
