@@ -1,0 +1,16 @@
+ {{!-- views/index.hbs lists all the Quests, showing the: title quest_giver of each Quest. --}}
+ {{#if Quest}}
+  <ul>
+  {{#each Quest}}
+    <p>
+      {{ quest_giver }}
+
+      {{ title }}
+
+      {{ rewards }}
+
+      {{ locations }}
+    </p>
+  {{/each}}
+  </ul>
+{{/if}}
