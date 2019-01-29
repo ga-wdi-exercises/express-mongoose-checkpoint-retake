@@ -1,0 +1,16 @@
+<div>
+    <h1> {{ quests.title }} </h1>
+</div>
+<div>
+    <h2> {{ quests.quest_giver }} </h2>
+</div>
+
+ {{#each quests}}
+<div>
+    <p> {{ rewards }} </p>
+</div>
+<div>
+    <p> {{ locations }} </p>
+</div>
+{{/each}}
+{{!-- displays the Quests's title, quest_giver, rewards and locations. --}}
