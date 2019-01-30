@@ -13,7 +13,7 @@ Fork and clone this repository. After cloning down **your fork**...
 
 To run the tests in the terminal, run `npm test`.
   - Every time you make a change and save your files, you will need to manually re-run the tests.
-  - When you start, it will report 5 tests are passing and 5 are failing (sometimes it will say 4 out of  6). Your goal is to make as many pass as you can in the hour provided. As you complete tests more will be revealed, there are a total of 18 tests, you need to complete 11 tests to pass the checkpoint.
+  - When you start, it will report 5 tests are passing and 5 are failing (sometimes it will say 4 out of  6). Your goal is to make as many pass as you can in the hour provided. As you complete tests more will be revealed, there are a total of 17 tests, you need to complete 11 tests to pass the checkpoint.
 
   - Read the output of the failing tests. It will tell you why the test failed.
 
@@ -25,11 +25,13 @@ For this checkpoint, you need to build a simple application for tracking Quests.
 
 ### Requirements
 
-1. There is already a `package.json` file with the dependencies necessary for running the tests. Install everything else required to build your application server with Express, Mongoose, and Handlebars (use `hbs` instead of `express-handlebars`).
+1. There is already a `package.json` file with the dependencies necessary for running the tests. You will have to manually install everything else required to build your application server with Express, Mongoose, and Handlebars (use `hbs` instead of `express-handlebars`).
 
-2. Create the following directories `controllers` and `views` if they are not provided. The names must match these exactly, so be careful to pluralize.
+2. Create the following directories `controllers` and `views` if they are not already there. The names must match these exactly, so be careful to pluralize. In the `controllers` directory you should have a file called `quests.js`
 
-3. There will be a single model, `Quest`, with 4 fields and they are expected to be a specific data type: 
+3. Require and initialize express in your `index.js` file.
+
+3. Create a new schema in your `models/Quest.js` file and store it in a variable called `Quest`, with 4 fields. Each field is expected to have a specific data type: 
 
   - title: String
   - quest_giver: String
@@ -40,6 +42,8 @@ For this checkpoint, you need to build a simple application for tracking Quests.
   - `GET '/'` which should redirect to `/quests'
   - `GET '/quests'` which render view with a list of notes
   - `GET '/quest/:someParameter'` where `:someParameter` can be used to identify or grab a single `Quest` from the database.
+
+5. Configure your express application to use `hbs` as the view engine.
 
 5. Your application should have the following views...
 

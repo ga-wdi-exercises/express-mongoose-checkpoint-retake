@@ -57,14 +57,6 @@ describe("Setup -", () => {
       done()
     })
 
-    it("should have a quests controller at ./controllers/quests.js", done => {
-      let importMessagesController = () => require("../controllers/quests.js")
-
-      // expect(importMessagesController).to.not.throw()
-      expect(importMessagesController).not.to.be.undefined
-      done()
-    })
-
     it("should have a Quest model inside ./models/Quest.js", done => {
       let importModel = () => require("../models/Quest")
       expect(importModel).to.not.throw()
@@ -85,13 +77,13 @@ describe("Model -", () => {
   })
 
   beforeEach(done => {
-    Quest.remove({}).then(() => {
+    Quest.deleteMany({}).then(() => {
       done()
     })
   })
 
   afterEach(done => {
-    Quest.remove({}).then(() => {
+    Quest.deleteMany({}).then(() => {
       done()
     })
   })
@@ -106,17 +98,17 @@ describe("Model -", () => {
     done()
   })
 
-  it("should have an author property on the model", done => {
+  it("should have a quest_giver property on the model", done => {
     expect(Quest.schema.obj).to.have.property("quest_giver")
     done()
   })
 
-  it("should have an body property on the model", done => {
+  it("should have a rewards property on the model", done => {
     expect(Quest.schema.obj).to.have.property("rewards")
     done()
   })
 
-  it("should have an body property on the model", done => {
+  it("should have a locations property on the model", done => {
     expect(Quest.schema.obj).to.have.property("locations")
     done()
   })
@@ -159,7 +151,7 @@ describe("Routes -", () => {
   })
 
   beforeEach(done => {
-    Quest.remove({}).then(() => {
+    Quest.deleteMany({}).then(() => {
       Quest.create({
         "title": "House of Horrors",
         "quest_giver": "Vigilant Tyranus",
@@ -170,7 +162,7 @@ describe("Routes -", () => {
   })
 
   afterEach(done => {
-    Quest.remove({}).then(() => done())
+    Quest.deleteMany({}).then(() => done())
   })
 
   describe("A GET request for the homepage ('/')", () => {
