@@ -13,7 +13,7 @@ Fork and clone this repository. After cloning down **your fork**...
 
 To run the tests in the terminal, run `npm test`.
   - Every time you make a change and save your files, you will need to manually re-run the tests.
-  - When you start, it will report 5 tests are passing and 5 are failing (sometimes it will say 4 out of  6). Your goal is to make as many pass as you can in the hour provided. As you complete tests more will be revealed, there are a total of 17 tests, you need to complete 11 tests to pass the checkpoint.
+  - When you start, it will report 3 tests are passing and 6 are failing (sometimes it will say 4 out of  6). Your goal is to make as many pass as you can in the hour provided. As you complete tests more will be revealed, there are a total of 17 tests, you need to complete 11 tests to pass the checkpoint.
 
   - Read the output of the failing tests. It will tell you why the test failed.
 
